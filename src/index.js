@@ -5,13 +5,15 @@ import App from './App';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import PageNotFound from './components/PageNotFound';
 
-
+// router components
 function Router() {
   return (
     <BrowserRouter>
       <Routes>
         <Route exact path='/' element={<App/>} />
+        <Route exact path='/*' element={<PageNotFound/>} />
       </Routes>
     </BrowserRouter>
   )
