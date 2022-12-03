@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import './App.css';
+import ArticleList from './components/ArticleList.component';
 
 function App() {
   // articles
@@ -23,19 +24,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Blog App</h1>
-      {
-        articles.map((article) => {
-          return <div key={article.id}>
-            <h2 >{article.title}</h2>
-            <p>{article.description}</p>
-            <p>Author: {article.created_user.email }</p>
-            <p>Created At: {article.created_at }</p>
-
-
-          </div> 
-        }) 
-      }
+      <h1 style={{marginBottom:'60px'}}>Blog App</h1>
+      <ArticleList articles={articles}/>
     </div>
   );
 }
