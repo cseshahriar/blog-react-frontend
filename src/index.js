@@ -13,8 +13,8 @@ import App from './App';
 function Router() {
     return(
         <Routes>
-            <Route exact path = "/" component = {Login}/>
-            <Route exact path = "/articles" component = {App}/>
+            <Route exact path="/" element={<Login/>}/>
+            <Route exact path= "/articles" element={<App/>}/>
         </Routes>
     )
 }
