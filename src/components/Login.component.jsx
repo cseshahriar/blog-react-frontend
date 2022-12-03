@@ -1,18 +1,18 @@
 import React, {useState, useEffect} from "react";
 import APIService from "../APIService";
 import {useCookies} from 'react-cookie';
-import {useHistory} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'
 
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [token, setToken] = useCookies(['mytoken']);
     const [isLogin, setLogin] = useState(true);
-    let history = useHistory();
+    const navigate = useNavigate();
 
     useEffect(() => {
         if(token['mytoken']) {
-            history.push('/articles')
+            navigate('/articles')
         }
     }, [token]) // one time
 
