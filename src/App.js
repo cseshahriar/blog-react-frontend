@@ -12,7 +12,7 @@ function App() {
         'method': 'GET',
         headers: { 
           'Content-Type': 'application/json',
-          'Authorization': 'Token 24b975f03c5a5ef923b42c74c8d333d47606b33c'
+          'Authorization': 'Token 8625fef8bd7dc865e72c83bbfc04cd61348e0803'
         }
 
       })

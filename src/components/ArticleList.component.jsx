@@ -12,6 +12,12 @@ function ArticleList(props) {
                     <p>{article.description}</p>
                     <p>Author: {article.created_user.email }</p>
                     <p>Created At: {article.created_at }</p>
+
+                    <div className="row">
+                        <div className="col-md-1">
+                            <button className="btn btn-primary">Update</button>
+                        </div>
+                    </div>
                     <hr/>
                 </div> 
                 }) 
