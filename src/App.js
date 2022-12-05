@@ -16,11 +16,12 @@ function App() {
   const [token, setToken, removeToken] = useCookies(['mytoken']);
 
   useEffect(() => {
+      console.log('token', token)
     fetch("http://127.0.0.1:8000/api/articles/", {
         'method': 'GET',
         headers: { 
           'Content-Type': 'application/json',
-          'Authorization': `Token${token}`
+          'Authorization': `Token ${token['mytoken']}`
         }
 
       })
